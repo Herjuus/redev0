@@ -1,0 +1,30 @@
+---
+import { Button } from '@/components/ui/button';
+import { Search, Command, LayoutDashboard } from 'lucide-react';
+---
+
+<header class="sticky top-0 bg-background w-full py-4 md:py-2 flex items-center justify-between">
+    <div class="flex items-center space-x-2">
+        <a href="/">
+            <h1 class="text-2xl text-primary font-mono">redev0.</h1>
+        </a>
+        <!-- <Button className='space-x-8 font-light' size={'default'} variant={'outline'}>
+            <div class="flex items-center space-x-2 h-full text-primary">
+                <Search strokeWidth={2} absoluteStrokeWidth className='h-2/3 w-fit'/>
+                <span>Search</span>
+            </div>
+            <div class="flex h-full items-center font-extralight text-primary">
+                <Command strokeWidth={1} absoluteStrokeWidth className='h-2/3 w-fit'/>
+                K
+            </div>
+        </Button> -->
+    </div>
+    <nav class="hidden md:flex items-center space-x-4">
+        <div>
+            <a href="/docs"><Button className='font-light' variant={'link'}>Docs</Button></a>
+            <a href="/pricing"><Button className='font-light' variant={'link'}>Pricing / FAQ</Button></a>
+            <!-- <a href="/faq"><Button className='font-light' variant={'link'}>FAQ</Button></a> -->
+        </div>
+        <a href="/dashboard"><Button className='font-light'>Dashboard <LayoutDashboard className='h-2/3' strokeWidth={2} absoluteStrokeWidth/></Button></a>
+    </nav>
+</header>
