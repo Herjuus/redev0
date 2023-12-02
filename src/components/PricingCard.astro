@@ -1,0 +1,40 @@
+---
+import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "./ui/card";
+import { Button } from "./ui/button";
+import { Check } from "lucide-react";
+import { Separator } from "./ui/separator";
+
+interface Props {
+    title: String,
+    projects: { name: String, description: String }[]
+}
+
+const { title, projects } = Astro.props;
+---
+
+<Card>
+    <CardHeader>
+        <CardTitle>{title}</CardTitle>
+    </CardHeader>
+    <CardContent>
+        <ul class="space-y-2">
+            {projects.map((project, index) => {
+                return (
+                    <li class="flex space-x-2 font-extralight items-center">
+                        <div><Check className="text-primary-500" strokeWidth={1} absoluteStrokeWidth size={15}/></div>
+                        <div>
+                            <p>{project.name}</p>
+                            <p class="text-xs font-extralight">{project.description}</p>
+                        </div>
+                    </li>
+                    <div class="last:hidden">
+                        <Separator />
+                    </div>
+                )
+            })}
+        </ul>
+    </CardContent>
+    <CardFooter>
+        <Button>Choose {title}</Button>
+    </CardFooter>
+</Card>

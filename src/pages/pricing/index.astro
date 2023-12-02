@@ -1,7 +1,19 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import PricingCard from "@/components/PricingCard.astro";
+
+const StarterProjects = [
+    { name: 'Up to 5 Projects', description: 'Manage and track analytics for a maximum of 5 projects.' },
+    { name: 'Unlimited API Requests', description: 'Infinite number of API requests per month.' },
+    { name: 'Framework Integrations', description: 'Access pre-made integrations for various frameworks (Node, Axum, Flask, Django, etc.).' },
+    { name: 'Collaboration Tools', description: 'Every project allows up to 5 collaborators. Collaborate with different team members, sharing project insights and analytics.' },
+]
 ---
 
 <Layout title="Pricing / FAQ">
-    
+    <main class="flex justify-center">
+        <div class="w-5/6 grid grid-cols-2 gap-2">
+            <PricingCard title="Starter" projects={StarterProjects} />
+        </div>
+    </main>
 </Layout>
