@@ -4,6 +4,7 @@ import { LayoutDashboard, Menu } from 'lucide-react';
 
 import ToggleMobileMenu from './ToggleMobileMenu';
 import MobileMenu from './MobileMenu';
+import { ModeToggle } from './ModeToggle';
 ---
 
 <header class="sticky top-0 bg-background w-full ">
@@ -20,6 +21,7 @@ import MobileMenu from './MobileMenu';
                 <a href="/pricing"><Button className='font-light' variant={'link'}>Pricing / FAQ</Button></a>
                 <!-- <a href="/faq"><Button className='font-light' variant={'link'}>FAQ</Button></a> -->
             </div>
+            <ModeToggle client:load />
             <a href="/dashboard"><Button className='font-light'>Dashboard <LayoutDashboard className='h-2/3' strokeWidth={2} absoluteStrokeWidth/></Button></a>
         </nav>
     </div>
