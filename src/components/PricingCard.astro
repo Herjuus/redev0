@@ -22,7 +22,7 @@ const { title, projects, disabled=false } = Astro.props;
             {projects.map((project, index) => {
                 return (
                     <li class="flex space-x-2 font-extralight items-center">
-                        <div><Check className="text-primary-500" strokeWidth={1} absoluteStrokeWidth size={15}/></div>
+                        <div><Check className="text-primary" strokeWidth={1} absoluteStrokeWidth size={15}/></div>
                         <div>
                             <p>{project.name}</p>
                             <p class="text-xs font-extralight">{project.description}</p>
