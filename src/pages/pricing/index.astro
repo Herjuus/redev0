@@ -8,12 +8,27 @@ const StarterProjects = [
     { name: 'Framework Integrations', description: 'Access pre-made integrations for various frameworks (Node, Axum, Flask, Django, etc.).' },
     { name: 'Collaboration Tools', description: 'Every project allows up to 5 collaborators. Collaborate with different team members, sharing project insights and analytics.' },
 ]
+const ProProjects = [
+    { name: 'Access to Free Tier Features', description: 'Enjoy all features available in the Free tier, including managing up to 5 projects, basic analytics, limited API requests, and basic customization.' },
+    { name: 'Unlimited Projects', description: 'Manage limitless projects for extensive analytics.' },
+    { name: 'Advanced Analytics & Customization', description: 'Access deeper insights and create fully customizable reports.' },
+    { name: 'Enhanced Collaboration', description: 'Manage larger teams with up to 30 collaborators per project.' },
+    { name: 'Email Notifications', description: 'Set up customizable email alerts for critical events or analytics thresholds.' },
+]
 ---
 
 <Layout title="Pricing / FAQ">
-    <main class="flex justify-center">
-        <div class="w-5/6 grid grid-cols-2 gap-2">
-            <PricingCard title="Starter" projects={StarterProjects} />
+    <main class="space-y-6">
+        <div class="flex justify-center">
+            <div class="md:w-5/6">
+                <h1 class="text-5xl font-bold">Pricing</h1>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="md:w-5/6 grid grid-cols-1 md:grid-cols-2 gap-2">
+                <PricingCard title="Starter" projects={StarterProjects} />
+                <PricingCard title="Pro" projects={ProProjects} disabled/>
+            </div>
         </div>
     </main>
 </Layout>

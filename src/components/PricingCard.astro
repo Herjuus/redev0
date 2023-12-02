@@ -6,13 +6,14 @@ import { Separator } from "./ui/separator";
 
 interface Props {
     title: String,
-    projects: { name: String, description: String }[]
+    projects: { name: String, description: String }[],
+    disabled?: boolean
 }
 
-const { title, projects } = Astro.props;
+const { title, projects, disabled=false } = Astro.props;
 ---
 
-<Card>
+<Card className="flex flex-col justify-between">
     <CardHeader>
         <CardTitle>{title}</CardTitle>
     </CardHeader>
@@ -35,6 +36,6 @@ const { title, projects } = Astro.props;
         </ul>
     </CardContent>
     <CardFooter>
-        <Button>Choose {title}</Button>
+        <Button className="w-full md:w-fit" disabled={disabled}>{!disabled ? <span>Choose {title}</span> : <span>Coming soon</span> }</Button>
     </CardFooter>
 </Card>
