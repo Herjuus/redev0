@@ -9,7 +9,7 @@ const StarterProjects = [
     { name: 'Collaboration Tools', description: 'Every project allows up to 5 collaborators. Collaborate with different team members, sharing project insights and analytics.' },
 ]
 const ProProjects = [
-    { name: 'Access to Free Tier Features', description: 'Enjoy all features available in the Free tier, including managing up to 5 projects, basic analytics, limited API requests, and basic customization.' },
+    { name: 'Access to Free Tier Features', description: 'Enjoy all features available in the Free tier.' },
     { name: 'Unlimited Projects', description: 'Manage limitless projects for extensive analytics.' },
     { name: 'Advanced Analytics & Customization', description: 'Access deeper insights and create fully customizable reports.' },
     { name: 'Enhanced Collaboration', description: 'Manage larger teams with up to 30 collaborators per project.' },
@@ -26,7 +26,7 @@ const ProProjects = [
         </div>
         <div class="flex justify-center">
             <div class="md:w-5/6 grid grid-cols-1 md:grid-cols-2 gap-2">
-                <PricingCard title="Starter" projects={StarterProjects} />
+                <PricingCard title="Starter" projects={StarterProjects} popular />
                 <PricingCard title="Pro" projects={ProProjects} disabled/>
             </div>
         </div>
