@@ -17,7 +17,7 @@ const { title, projects, disabled=false, popular=false } = Astro.props;
 <Card className="flex flex-col justify-between relative overflow-hidden">
     {popular && (
         <div class="absolute -right-10 top-8">
-            <p class="rotate-45 bg-primary px-10 py-1">Most popular</p>
+            <p class="rotate-45 bg-primary px-10 py-1 text-primary-foreground">Most popular</p>
         </div>
     )}
     <CardHeader>
