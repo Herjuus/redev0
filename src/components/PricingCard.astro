@@ -9,9 +9,10 @@ interface Props {
     projects: { name: String, description: String }[]
     disabled?: boolean
     popular?: boolean
+    price?: number
 }
 
-const { title, projects, disabled=false, popular=false } = Astro.props;
+const { title, projects, disabled=false, popular=false, price=0 } = Astro.props;
 ---
 
 <Card className="flex flex-col justify-between relative overflow-hidden">
@@ -22,6 +23,7 @@ const { title, projects, disabled=false, popular=false } = Astro.props;
     )}
     <CardHeader>
         <CardTitle>{title}</CardTitle>
+        <CardDescription>${price} / month</CardDescription>
     </CardHeader>
     <CardContent>
         <ul class="space-y-2">
