@@ -1,56 +1,17 @@
 ---
 import Layout from "./Layout.astro";
+
+
+const { frontmatter } = Astro.props;
 ---
 
-<Layout title="Docs">
-    <div class="grow flex flex-row gap-2 relative">
-        <div class="w-80 grow h-full min-w-[20rem] top-14 sticky bg-red-500 overflow-y-scroll">
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
-            jeg liker tissefanter
+<Layout title={`${frontmatter.title}`}>
+    <div class="grow flex flex-row justify-between gap-2 relative">
+        <div class="w-80 h-full min-w-[20rem] top-14 p-2 rounded sticky bg-secondary flex flex-col overflow-y-scroll">
+            <span>ok</span>
         </div>
-        <div>
+        <main class="grow bg-secondary rounded p-2 prose max-w-full w-full">
             <slot/>
-        </div>
+        </main>
     </div>
 </Layout>
