@@ -2,10 +2,10 @@
 import Layout from "./Layout.astro";
 
 
-const { frontmatter } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.title}`}>
+<Layout title={`${title}`}>
     <div class="grow flex flex-row justify-between gap-2 relative">
         <div class="w-80 h-full min-w-[20rem] top-14 p-2 rounded sticky bg-secondary flex flex-col overflow-y-scroll">
             <span>ok</span>
