@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime.f667cf9a.js";import{u as n,m as r}from"./index.bfd011c3.js";import"./index.fab84a23.js";function p(e){return n(r)?o.jsx("div",{className:"bg-background border-[1px] shadow rounded p-2 mb-6 flex flex-col gap-1",children:e.children}):null}export{p as default};
